@@ -1,0 +1,1 @@
+export { FrontPage } from './ui/front-page';

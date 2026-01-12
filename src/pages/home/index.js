@@ -1,0 +1,1 @@
+export { LazyHome as Home } from './HomePage.lazy';

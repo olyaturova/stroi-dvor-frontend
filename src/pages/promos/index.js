@@ -1,0 +1,1 @@
+export { LazyPromos as Promos } from './Promos.lazy';

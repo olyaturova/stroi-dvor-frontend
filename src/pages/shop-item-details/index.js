@@ -1,0 +1,1 @@
+export { LazyShopItemDetails as ShopItemDetails } from './ShopItemDetails.lazy';

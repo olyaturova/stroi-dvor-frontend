@@ -1,0 +1,1 @@
+export { ScrollingAnnouncement } from './scrolling-announcement';

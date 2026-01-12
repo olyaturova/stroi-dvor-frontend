@@ -1,0 +1,1 @@
+export { LazyDaily as Daily } from './Daily.lazy';

@@ -1,0 +1,1 @@
+export { LazyAdminLogin as AdminLogin } from './AdminLogin.lazy';

@@ -1,0 +1,1 @@
+export { ShopItemDetailsInfo } from './ui/shop-item-details-info';

@@ -1,0 +1,1 @@
+export { StocksInfo } from './ui/stocks-info';

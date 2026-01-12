@@ -1,0 +1,66 @@
+.activeAccordion, .default {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #3B3D42;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.hidden {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 40px;
+    height: auto;
+    transition: 0.4s ease-in-out;
+}
+
+.activeAccordion .arrow {
+    rotate: 45deg;
+}
+
+.arrow {
+    transition: 0.3s;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 25px;
+}
+
+.accordion-header {
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.accordion-content {
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffffff;
+    padding: 10px 0px;
+}
+
+@media all and (max-width:540px) {
+    .activeAccordion, .default {
+        margin-bottom: 10px;
+    }
+}

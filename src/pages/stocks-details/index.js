@@ -1,0 +1,1 @@
+export { LazyStocksDetails as StocksDetails } from './StocksDetails.lazy';

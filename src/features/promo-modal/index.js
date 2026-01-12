@@ -1,0 +1,1 @@
+export { ContentPromo } from './ui/Content-promo';

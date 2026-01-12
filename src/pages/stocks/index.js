@@ -1,0 +1,1 @@
+export { LazyStocks as Stocks } from './Stocks.lazy';
