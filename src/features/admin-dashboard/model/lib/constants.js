@@ -1,4 +1,5 @@
-export const API_SHOP = 'https://stroi-dvor-backend.onrender.com/api/shop';
+export const BASE_URL = 'https://stroi-dvor-backend.onrender.com';
+export const API_SHOP = `${BASE_URL}/api/shop`;
 
 export const getFieldLabel = (fieldName) => {
     const labels = {
@@ -18,17 +19,18 @@ export const getFieldLabel = (fieldName) => {
 };
 
 export const CATEGORIES = [
-      'Стеновые и фасадные материалы', 
-        'Кровля и водосточная система', 
-        'Цемент и сыпучие материалы', 
-        'Пиломатериалы и отделка деревом', 
-        'Электрика', 
-        'Канализация и водоотведение', 
-        'Поликарбонат', 
-        'Краски', 
-        'Пена монтажная, жидкие гвозди', 
-        'Сантехника', 'Кирпич', 
-        'Погонажные изделия'
+    'Стеновые и фасадные материалы', 
+    'Кровля и водосточная система', 
+    'Цемент и сыпучие материалы', 
+    'Пиломатериалы и отделка деревом', 
+    'Электрика', 
+    'Канализация и водоотведение', 
+    'Поликарбонат', 
+    'Краски', 
+    'Пена монтажная, жидкие гвозди', 
+    'Сантехника', 
+    'Кирпич', 
+    'Погонажные изделия'
 ];
 
 export const initialItemState = {

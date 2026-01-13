@@ -2,7 +2,9 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 
 const AuthContext = createContext(null);
-const AUTH_API = 'https://stroi-dvor-backend.onrender.com/api/auth';
+
+const BASE_URL = 'https://stroi-dvor-backend.onrender.com';
+const AUTH_API = `${BASE_URL}/api/auth`;
 
 export const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(localStorage.getItem('adminToken') || null);

@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const BASE_URL = 'https://stroi-dvor-backend.onrender.com';
+
 export const cartSlice = createSlice({
     name: 'cart',
     initialState: {
@@ -7,7 +9,6 @@ export const cartSlice = createSlice({
     },
     reducers: {
         addItemToCart: (state, action) => {
-       
             let product, quantity;
             
             if (action.payload.product) {
@@ -39,7 +40,7 @@ export const cartSlice = createSlice({
                     if (product.imageUrl) return product.imageUrl;
         
                     if (img.includes('.')) {
-                        return `https://stroi-dvor-backend.onrender.com/uploads/${img}`;
+                        return `${BASE_URL}/uploads/${img}`;
                     }
                     
                     return '/placeholder.jpg';

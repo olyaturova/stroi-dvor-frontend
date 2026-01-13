@@ -5,7 +5,7 @@ import { ShopItemDetailsInfo } from "@/widgets/product-details";
 import { TabInfoOne, TabInfoTwo } from "@/entities/details";
 import axios from 'axios';
 
-const API_URL = 'https://stroi-dvor-backend.onrender.com/';
+const BASE_URL = 'https://stroi-dvor-backend.onrender.com';
 
 const ShopItemDetails = () => {
     const navigate = useNavigate();
@@ -23,11 +23,12 @@ const ShopItemDetails = () => {
             try {
                 setLoading(true);
                 setError(null);
-                const response = await axios.get(`${API_URL}/api/shop/${id}`);
+                const response = await axios.get(`${BASE_URL}/api/shop/${id}`);
 
                 const productData = response.data;
                 if (productData && !productData.imageUrl && productData.image) {
-                    productData.imageUrl = `${API_URL}/uploads/${productData.image}`;
+
+                    productData.imageUrl = `${BASE_URL}/uploads/${productData.image}`;
                 }
                 
                 setProduct(productData);
@@ -48,7 +49,6 @@ const ShopItemDetails = () => {
                     <div className="spinner"></div>
                     <p>Загрузка товара...</p>
                 </div>
-   
             </div>
         );
     }
@@ -66,13 +66,12 @@ const ShopItemDetails = () => {
                         Вернуться в магазин
                     </button>
                 </div>
-          
             </div>
         );
     }
 
     const imageUrl = product.imageUrl || 
-                    (product.image && `${API_URL}/uploads/${product.image}`);
+                    (product.image && `${BASE_URL}/uploads/${product.image}`);
 
     const { 
         price, 
@@ -127,7 +126,6 @@ const ShopItemDetails = () => {
                     </div>
                 </div>
             </section>
-      
         </div>
     );
 };

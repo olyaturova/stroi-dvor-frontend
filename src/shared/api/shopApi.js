@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'https://stroi-dvor-backend.onrender.com/api';
+const BASE_URL = 'https://stroi-dvor-backend.onrender.com';
+const API_URL = `${BASE_URL}/api`;
 
 const api = axios.create({
     baseURL: API_URL,

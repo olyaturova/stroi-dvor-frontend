@@ -8,7 +8,8 @@ import axios from 'axios';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const API_SHOP = 'https://stroi-dvor-backend.onrender.com/api/shop';
+const BASE_URL = 'https://stroi-dvor-backend.onrender.com';
+const API_SHOP = `${BASE_URL}/api/shop`;
 
 export const Products = () => {
     const selectedCategory = useSelector(getSelectedCategory);
@@ -27,7 +28,6 @@ export const Products = () => {
                 setProducts(response.data);
             } catch (error) {
                 setError('Не удалось загрузить товары. Проверьте подключение к серверу.');
-     
             } finally {
                 setLoading(false);
             }
@@ -35,7 +35,6 @@ export const Products = () => {
 
         fetchProducts();
     }, []);
-
 
     useEffect(() => {
         const el = ref.current;
@@ -49,7 +48,6 @@ export const Products = () => {
             });
         }
     }, [products]);
-
 
     const filteredProducts = products.filter(product => {
         if (selectedCategory === 'Все категории') return true;

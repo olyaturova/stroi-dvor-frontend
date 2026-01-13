@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'https://stroi-dvor-backend.onrender.com/api';
-
+const BASE_URL = 'https://stroi-dvor-backend.onrender.com';
+const API_URL = `${BASE_URL}/api`;
 
 const publicApi = axios.create({
   baseURL: API_URL,
@@ -25,5 +25,4 @@ export const publicService = {
       throw error;
     }
   },
-
 };

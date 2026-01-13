@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { getFieldLabel, initialItemState, CATEGORIES  } from '../model/lib/constants';
+import { getFieldLabel, initialItemState, CATEGORIES } from '../model/lib/constants';
+import { BASE_URL } from '../model/lib/constants';
 
-const ModalForm = ({ item, onClose, onSave, onFieldChange, loading = false  }) => {
+const ModalForm = ({ item, onClose, onSave, onFieldChange, loading = false }) => {
     const [imagePreview, setImagePreview] = useState('');
     const [imageFile, setImageFile] = useState(null);
 
@@ -13,12 +14,10 @@ const ModalForm = ({ item, onClose, onSave, onFieldChange, loading = false  }) =
                 if (item.image.startsWith('http') || item.image.startsWith('/')) {
                     setImagePreview(item.image);
                 } else {
-
-                    const previewUrl = `https://stroi-dvor-backend.onrender.com/uploads/${item.image}`;
+                    const previewUrl = `${BASE_URL}/uploads/${item.image}`;
                     setImagePreview(previewUrl);
                 }
             } else if (item.image instanceof File) {
-
                 const previewUrl = URL.createObjectURL(item.image);
                 setImagePreview(previewUrl);
                 
